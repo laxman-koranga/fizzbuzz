@@ -1,15 +1,22 @@
+
 package com.fizzbuzz;
 
 public class Fizzbuzz {
 
+	public String fizzBuzzGenerator(int value) {
+		if (value % 3 == 0) {
+			return "Fizz";
+		} else if (value % 5 == 0) {
+			return "Buzz";
+		} else {
+			return String.valueOf(value);
+		}
+	}
+
 	public static void main(String[] args) {
+		Fizzbuzz fizzbuzz = new Fizzbuzz();
 		for (int i = 1; i <= 100; i++) {
-			if ((i % 3) == 0) // Is it a multiple of 3?
-				System.out.println("Fizz");
-			else if ((i % 5) == 0) // Is it a multiple of 5?
-				System.out.println("Buzz");
-			else
-				System.out.println(i); // Not a multiple of 3 or 5
+			System.out.println(fizzbuzz.fizzBuzzGenerator(i));
 		}
 	}
 }
